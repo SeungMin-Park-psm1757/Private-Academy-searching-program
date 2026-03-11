@@ -11,6 +11,8 @@
 - Next.js app on Vercel
 - PostgreSQL on a managed provider with branch or restore support
 - Environment variables injected per environment
+- Healthcheck endpoint at `/api/health`
+- Production homepage URL should be mirrored in `APP_URL`
 
 ## Release Flow
 
@@ -25,12 +27,14 @@
 - Stale academy data flagging
 - Recommendation cache cleanup
 - Payment retry or renewal processing
+- Place source refresh from Kakao Local seed mappings
 
 ## Job Safety
 
 - Use locking where overlap is possible
 - All cron handlers must be idempotent
 - Separate operational metrics from recommendation quality metrics
+- Require Vercel cron invocation headers or `CRON_SECRET`
 
 ## Observability
 
@@ -38,3 +42,4 @@
 - Audit logs
 - Recommendation quality dashboards
 - Queue or job failure alerts
+- Request ID header propagation across middleware and API responses

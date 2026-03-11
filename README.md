@@ -97,14 +97,27 @@ Useful demo APIs:
 - `GET /api/academy/branches`
 - `GET /api/admin/audits`
 - `GET /api/admin/claims`
+- `GET /api/health`
 - `POST /api/public/recommendations`
 - `GET /api/public/recommendations/[sessionId]`
+
+Operational stub APIs:
+
+- `GET /api/cron/stale-academy-flagging`
+- `GET /api/cron/place-source-sync`
 
 ## Database Prep
 
 - SQL source: [`db/schema.sql`](./db/schema.sql)
 - Drizzle source: [`src/shared/db/schema.ts`](./src/shared/db/schema.ts)
 - Example env: [`.env.example`](./.env.example)
+
+## Environment Notes
+
+- `APP_URL` should match the deployed homepage URL on Vercel
+- `DATABASE_URL` is optional for the current demo flow, but required for Drizzle-backed persistence
+- `CRON_SECRET` is recommended before exposing cron routes outside local development
+- Kakao, OpenAI, and Toss keys are scaffolded but not yet wired to live providers
 
 ## Auth Scaffold
 

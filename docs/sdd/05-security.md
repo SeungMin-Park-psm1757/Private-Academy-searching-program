@@ -54,6 +54,9 @@
 - Schema validation
 - Output sanitization
 - Prompt-injection defensive parsing
+- Request ID propagation for traceability
+- Bot-protection hook before recommendation execution
+- Security headers via edge middleware
 
 ## Operational Controls
 
@@ -61,3 +64,5 @@
 - All rollback flows create new versions
 - High-risk fields may require two-step approval
 - Admin activity should be anomaly-monitored
+- Healthcheck route must not be cached
+- Cron routes should require Vercel cron headers or an explicit shared secret
