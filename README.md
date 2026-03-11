@@ -57,8 +57,8 @@ and platform administrators.
 
 ## Homepage
 
+- Live test app: [private-academy-searching-program.vercel.app](https://private-academy-searching-program.vercel.app/)
 - Test repository: [Private-Academy-searching-program](https://github.com/SeungMin-Park-psm1757/Private-Academy-searching-program)
-- Deploy URL: pending Vercel connection
 
 ## Documentation Map
 
